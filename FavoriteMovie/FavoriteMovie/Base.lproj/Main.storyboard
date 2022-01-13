@@ -85,7 +85,7 @@
             </objects>
             <point key="canvasLocation" x="1066.6666666666667" y="65.625"/>
         </scene>
-        <!--Moview Detail View Controller-->
+        <!--Details Movie-->
         <scene sceneID="Fbu-si-hYy">
             <objects>
                 <viewController id="Cte-4P-3Ga" customClass="MoviewDetailViewController" customModule="FavoriteMovie" customModuleProvider="target" sceneMemberID="viewController">
@@ -120,7 +120,7 @@
                             <constraint firstItem="AFp-II-ceQ" firstAttribute="top" secondItem="bTk-OK-SZU" secondAttribute="top" constant="81" id="cnX-Dp-7Ry"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="xSl-SH-PIo"/>
+                    <navigationItem key="navigationItem" title="Details Movie" id="xSl-SH-PIo"/>
                     <connections>
                         <outlet property="detailMovieName" destination="c0S-ZZ-myL" id="qfk-sc-g25"/>
                         <outlet property="imageView" destination="AFp-II-ceQ" id="qYg-pu-9IO"/>
