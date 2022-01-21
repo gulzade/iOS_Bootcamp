@@ -7,7 +7,7 @@
 
 import Foundation
 struct  DataModel: Decodable { //json formatındali değerler iççin model
-    let succes : Bool
+    let success : Bool
     let timestamp : Int
     let base : String
     let date : String

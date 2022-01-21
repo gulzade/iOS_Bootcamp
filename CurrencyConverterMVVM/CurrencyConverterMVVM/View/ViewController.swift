@@ -13,11 +13,23 @@ class ViewController: UIViewController,  UITableViewDataSource, UITableViewDeleg
     @IBOutlet weak var tableView: UITableView!
     private var currencyListViewModel: CurrencyListViewModel!
     private var dataViewModel: DataViewModel!
+    var colorArray = [UIColor]()
     override func viewDidLoad() {
         super.viewDidLoad()
         
         tableView.delegate = self
         tableView.dataSource = self
+        
+        
+        self.colorArray = [
+            UIColor(red: 205/255, green: 145/255, blue: 158/255, alpha: 1.0),
+            UIColor(red: 255/255, green: 187/255, blue: 255/255, alpha: 1.0),
+            UIColor(red: 219/255, green: 112/255, blue: 147/255, alpha: 1.0),
+            UIColor(red: 255/255, green: 181/255, blue: 197/255, alpha: 1.0),
+            UIColor(red: 205/255, green: 105/255, blue:201/255, alpha: 1.0),
+            UIColor(red: 238/255, green: 169/255, blue: 184/255, alpha: 1.0),
+          
+        ]
         
         getData()
     }
@@ -52,7 +64,7 @@ class ViewController: UIViewController,  UITableViewDataSource, UITableViewDeleg
         print("-------cell")
             cell.priceTextLabel.text = String(currencyViewModel.price)
             cell.ratesTextLabel.text = currencyViewModel.name
-        
+            cell.backgroundColor = self.colorArray[indexPath.row % 6]
         return cell
     }
 }
