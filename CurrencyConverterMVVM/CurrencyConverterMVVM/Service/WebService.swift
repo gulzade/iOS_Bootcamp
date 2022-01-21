@@ -22,8 +22,6 @@ class WebService {
                 
                 let curencyData = try? JSONDecoder().decode(DataModel.self, from: data)
                 //jsondecoder json formatndaki veriyi işlemeye decode etmeye veriye donusurmeye yarar. bİze bir protocol sorar bide datayı sorar. Decodeble protocolumuz //CurrencyConverter
-               print("***")
-                print(curencyData?.success)
                 
                 if let curencyData = curencyData {
                     completion(curencyData) //optionaldan cıkarmıak için if let içinde kullandık

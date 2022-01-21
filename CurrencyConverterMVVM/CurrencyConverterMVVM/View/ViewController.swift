@@ -40,7 +40,6 @@ class ViewController: UIViewController,  UITableViewDataSource, UITableViewDeleg
         WebService().downloadCurrencies(url: url) { (currencyMyData) in
             if let currencyMyData = currencyMyData {
                 print(currencyMyData)
-                print("-------")
                 self.dataViewModel = DataViewModel(currencyMyData: currencyMyData)
                 self.currencyListViewModel = self.dataViewModel.getCurrencyMyList()
                 
@@ -53,7 +52,6 @@ class ViewController: UIViewController,  UITableViewDataSource, UITableViewDeleg
     
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        print("row")
         return self.currencyListViewModel == nil ? 0 : self.currencyListViewModel.numberOfRowsInSection()
     }
     
@@ -61,7 +59,6 @@ class ViewController: UIViewController,  UITableViewDataSource, UITableViewDeleg
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "CurrencyCell", for: indexPath) as! CurrencyTableViewCell
         let currencyViewModel =  self.currencyListViewModel.currencyAtIndex(indexPath.row)
-        print("-------cell")
             cell.priceTextLabel.text = String(currencyViewModel.price)
             cell.ratesTextLabel.text = currencyViewModel.name
             cell.backgroundColor = self.colorArray[indexPath.row % 6]
