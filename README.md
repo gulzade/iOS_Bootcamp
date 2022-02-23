@@ -1,4 +1,4 @@
-#iOS_Bootcamp
+## iOS_Bootcamp
 
 ## Projects
 [1-CatchTheKenny](https://github.com/gulzade/innova_iOS_Bootcamp/tree/main/CatchTheKennyGame)
